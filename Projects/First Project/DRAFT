@@ -1,4 +1,130 @@
-Business Case:
-My first business case is____
+# 🧠 Customer and Product Analysis – AdventureWorks SQL Project
 
+**Author**: [Your Name]  
+**Tools**: PostgreSQL, Excel  
+**Project Type**: Data Analyst Portfolio Project  
+**Date**: May 2025
 
+---
+
+## 📌 Project Overview
+
+AdventureWorks Cycles is a fictional outdoor gear and bike retailer. This project analyzes their customer orders, product sales, and return data to answer key business questions and generate actionable insights.
+
+**Objectives:**
+
+- Identify the most profitable products and subcategories
+- Understand return behavior and its impact on margins
+- Compare performance by geography and customer income group
+- Suggest strategies to improve profit and reduce waste
+
+---
+
+## 🧰 Dataset & Tools
+
+- **Source**: AdventureWorks PostgreSQL database (custom queries)
+- **Data Size**: ~2,200 orders across 1 year
+- **Tools**:
+  - PostgreSQL for querying and joining multiple tables
+  - Excel for charting, pivot tables, and visual analysis
+
+---
+
+## 📊 Key Metrics Calculated
+
+| Metric                        | Description                                                        |
+|------------------------------|--------------------------------------------------------------------|
+| **Total Profit**             | Sales - Standard Cost                                              |
+| **Gross Margin**             | Profit / Sales                                                     |
+| **Return Rate**              | % of items returned per product                                    |
+| **Return Cost**              | Standard Cost * Quantity Returned                                  |
+| **Profit per Return Cost**   | Profit ÷ Return Cost (adjusts for return burden)                   |
+| **Revenue by Income Level**  | Total sales segmented by customer income bracket                   |
+| **Geographic Profitability** | Profit by country and region (e.g., US-Southwest, Australia)       |
+
+---
+
+## 📈 Insights & Charts
+
+### 1. 🚲 Mountain Bikes Are the Profit Drivers
+
+- Mountain Bikes generate the highest profit across all subcategories.
+- They also have lower return rates than categories like Jerseys or Shorts.
+
+🟢 **Recommendation**: Focus more marketing and stock on Mountain Bikes.
+
+<!-- Insert chart: bar chart of profit by product subcategory -->
+
+---
+
+### 2. 🌍 US & Australia Are Top-Performing Regions
+
+- US Southwest leads in total profit.
+- Australia has strong profit with relatively low return costs.
+
+🟢 **Recommendation**: Expand operations in Australia; it's an underutilized but profitable market.
+
+<!-- Insert chart: profit by country/region -->
+
+---
+
+### 3. 👛 Low-Income Customers Are the Biggest Spenders
+
+- Most revenue comes from customers in the lowest income bracket.
+- This may indicate a loyal budget-conscious market or affordable pricing strategies.
+
+🟢 **Recommendation**: Don’t neglect low-income segments; tailor value bundles or loyalty rewards.
+
+<!-- Insert chart: revenue by income level -->
+
+---
+
+### 4. ❌ Jerseys Perform Poorly
+
+- Jerseys have a high return cost relative to profit.
+- Negative profit per return cost indicates they may be a loss leader.
+
+🟢 **Recommendation**: Redesign, reprice, or remove jerseys from the catalogue.
+
+---
+
+## 📎 Top Recommendations
+
+✅ Focus on **Mountain Bikes** — high margin, low returns  
+✅ Scale presence in **Australia** — strong profits per order  
+✅ Target **Low-Income Customers** with loyalty programs or bundles  
+✅ Consider **discontinuing Jerseys** or reducing return rates via better sizing or product photos
+
+---
+
+## 🚀 Next Steps
+
+- Create a dashboard (Power BI or Tableau) to explore trends interactively
+- Add temporal analysis (e.g. monthly seasonality of returns or revenue)
+- Combine RFM segmentation with product performance for deeper customer insights
+
+---
+
+## 🧠 What I Learned
+
+This project sharpened my ability to:
+
+- Join complex tables using SQL (e.g. sales, returns, products, customers, geographies)
+- Derive business-critical KPIs like gross margin and return-adjusted profitability
+- Translate messy Excel outputs into actionable insights
+- Tell a compelling story with data, not just report figures
+
+---
+
+## 📂 Files
+
+- `sql_queries.sql`: All key queries used for extracting and joining data
+- `analysis_summary.xlsx`: Excel charts, pivot tables, and raw tables
+- `README.md`: This report
+
+---
+
+## 📬 Contact
+
+[Your LinkedIn](https://www.linkedin.com/in/yourname)  
+[Your Email Address]  
