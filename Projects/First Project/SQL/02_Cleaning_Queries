@@ -1,1 +1,23 @@
+Missing Data Check
+select * from Sales_2020
+where Territorykey is null or OrderDate is null or orderNumber is null or ProductKey is null or Customerkey is null or OrderLineItem is null or OrderQuantity is null
+
+Delete Null Customers
+delete from Customers
+where FirstName is null
+
+Drop Prefix Column
+ALTER TABLE Customers DROP COLUMN Prefix
+
+Check Data Types, Action: Corrected data types
+Checked data types:
+SELECT 
+    TABLE_NAME,
+    COLUMN_NAME,
+    DATA_TYPE
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME IN ('Sales_2020', 'Sales_2021', 'Sales_2022', 'Returns', 'Product',
+'Customers', 'Territory', 'Product_Subcategories', 'Product_Categories')
+ORDER BY TABLE_NAME, COLUMN_NAME;
+
 
