@@ -1,1 +1,5 @@
-
+Action: Combined 3 sales data tables into one Sales table:
+select * into Sales from(
+select * from Sales_2020
+union all select * from sales_2021
+union all select * from sales_2022) as sub
