@@ -17,7 +17,7 @@ ORDER BY totalsale DESC;
 
 **Insight:** Australia and the United States generate the highest total sales revenue.
 
-![Total Sales by Country](Images/Sales_Revenue_by_All_Regions.png)
+![Total Sales by Country](../Images/Sales_Revenue_by_All_Regions.png)
 
 ---
 
@@ -33,7 +33,7 @@ ORDER BY profit DESC;
 
 **Insight:** Profit is highest in Australia, aligning with total sales figures.
 
-![Total Profit by Country](Images/Australia_Total_profit_Return_Margin_returnproductprice_over_total_profit.png)
+![Total Profit by Country](../Images/Australia_Total_profit_Return_Margin_returnproductprice_over_total_profit.png)
 
 ---
 
@@ -51,7 +51,7 @@ ORDER BY return_rate_percent DESC;
 
 **Insight:** Some countries show significantly higher return rates, indicating potential satisfaction or quality issues.
 
-![Return Rate by Country](Images/Returns_by_Subcategory.png)
+![Return Rate by Country](../Images/Returns_by_Subcategory.png)
 
 ---
 
@@ -70,7 +70,7 @@ ORDER BY margin_ratio DESC;
 
 **Insight:** Profit margin per unit sold varies by country — some generate much more profit per sale.
 
-![Margin by Country](Images/Margin_by_Category.png)
+![Margin by Country](../Images/Margin_by_Category.png)
 
 ---
 
@@ -88,4 +88,4 @@ ORDER BY return_cost_ratio DESC;
 
 **Insight:** This metric highlights how costly returns are relative to total profit. A high value signals erosion of profitability due to product returns.
 
-![Return Cost as Percent of Profit](Images/Total_profit_Return_Margin_returnproductprice_over_total_profit.png)
+![Return Cost as Percent of Profit](../Images/Total_profit_Return_Margin_returnproductprice_over_total_profit.png)
