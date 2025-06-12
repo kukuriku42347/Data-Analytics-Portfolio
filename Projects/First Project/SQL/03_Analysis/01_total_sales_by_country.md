@@ -1,46 +1,91 @@
-# Total Sales by Country and Region
+# 📊 Sales and Profit Analysis – Full SQL Script and Insights
 
-In this analysis, I explore the total revenue across different countries and regions to understand geographic performance and identify strong markets.
-
----
-
-## 🌍 Sales Revenue by All Regions
-
-This chart provides an overview of the total sales revenue across all global regions in the dataset.
-
-![Sales Revenue by All Regions](../Images/Sales_Revenue_by_All_Regions.png)
-
-**Insight:**  
-We observe significant variations in revenue, with a clear dominance from certain regions. Further analysis may be needed to explore contributing factors such as product popularity or customer demographics.
+This report analyzes total sales revenue, profit, return rates, margins, and return costs across countries using SQL queries. Each section includes the SQL logic and a visual screenshot of the query result.
 
 ---
 
-## 🇺🇸 Sales Revenue by US Region
+## 💰 Total Sales Revenue by Country
 
-This breakdown focuses specifically on revenue performance within the United States, segmented by regional divisions.
+```sql
+SELECT ROUND(SUM(productprice * orderquantity), 0) AS totalsale, country
+FROM Sales s
+LEFT JOIN Product p ON s.productkey = p.productkey
+LEFT JOIN territory t ON s.territorykey = t.salesterritorykey
+GROUP BY country
+ORDER BY totalsale DESC;
+```
 
-![Sales Revenue by US Region](../Images/Sales_Revenue_by_US_Region.png)
+**Insight:** Australia and the United States generate the highest total sales revenue.
 
-**Insight:**  
-Revenue varies significantly within the U.S. Northeast and West regions outperform others, indicating potential hubs of customer activity or better product-market fit.
-
----
-
-## 🗺️ Sales Revenue by Territory
-
-This visualization shows the revenue distribution across territories, allowing for more granular insight beyond regional groupings.
-
-![Sales Revenue by Territory1](../Images/Sales_Revenue_by_Territory1.png)
-
-**Insight:**  
-Territorial trends mirror regional patterns to some extent, but also reveal micro-markets that may be worth targeting for growth or marketing campaigns.
+![Total Sales by Country](../../Images/Total%20Sales%20by%20Country.png)
 
 ---
 
-## Summary
+## 📈 Total Profit by Country
 
-- The United States contributes a major portion of overall sales revenue.
-- Some specific territories and regions perform well above others.
-- Further correlation with product type and demographic data could enrich these findings.
+```sql
+SELECT ROUND(SUM(totalprofit), 0) AS profit, country
+FROM Sales s
+LEFT JOIN territory t ON s.territorykey = t.salesterritorykey
+GROUP BY country
+ORDER BY profit DESC;
+```
 
+**Insight:** Profit is highest in Australia, aligning with total sales figures.
 
+![Australia - Total profit - Return - Margin - returnproductprice over total profit](../../Images/Australia%20-%20Total%20profit%20-%20Return%20-%20Margin%20-%20returnproductprice%20over%20total%20profit.png)
+
+---
+
+## 🔄 Return Rate by Country
+
+```sql
+SELECT 
+  country,
+  COUNT(CASE WHEN returnquantity > 0 THEN 1 END) * 100.0 / COUNT(*) AS return_rate_percent
+FROM Sales s
+LEFT JOIN territory t ON s.territorykey = t.salesterritorykey
+GROUP BY country
+ORDER BY return_rate_percent DESC;
+```
+
+**Insight:** Some countries show significantly higher return rates, indicating potential satisfaction or quality issues.
+
+![Return Rate by Country](../../Images/Return%20Rate%20by%20Country.png)
+
+---
+
+## 💸 Margin by Country
+
+```sql
+SELECT 
+  country,
+  ROUND(SUM(totalprofit) / SUM(productprice * orderquantity), 2) AS margin_ratio
+FROM Sales s
+LEFT JOIN Product p ON s.productkey = p.productkey
+LEFT JOIN territory t ON s.territorykey = t.salesterritorykey
+GROUP BY country
+ORDER BY margin_ratio DESC;
+```
+
+**Insight:** Profit margin per unit sold varies by country — some generate much more profit per sale.
+
+![Margin by Country](../../Images/Margin%20by%20Country.png)
+
+---
+
+## 🚫 Return Cost as % of Profit
+
+```sql
+SELECT 
+  country,
+  ROUND(SUM(returnproductprice) / SUM(totalprofit), 2) AS return_cost_ratio
+FROM Sales s
+LEFT JOIN territory t ON s.territorykey = t.salesterritorykey
+GROUP BY country
+ORDER BY return_cost_ratio DESC;
+```
+
+**Insight:** This metric highlights how costly returns are relative to total profit. A high value signals erosion of profitability due to product returns.
+
+![ReturnProductPrice over Total Profit](../../Images/ReturnProductPrice%20over%20Total%20Profit.png)
