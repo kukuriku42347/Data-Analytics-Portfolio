@@ -18,7 +18,7 @@ GROUP BY country
 ORDER BY ROUND(SUM(productprice * orderquantity), 0) DESC;
 ```
 
-📸 Image: `Projects/First Project/SQL/Images/Sales_Revenue_by_Territory1.png`  
+![Sales Revenue by Territory](../Images/Sales_Revenue_by_Territory1.png)  
 💡 **Insight:** US brings in the most revenue, followed closely by Australia. Combined revenue from France, Germany, and the UK is comparable to top performers. Canada performs weakest.  
 ✅ **Recommendation:** Explore sales/marketing saturation in underperforming countries to find expansion opportunities.
 
@@ -51,10 +51,8 @@ GROUP BY region
 ORDER BY ROUND(SUM(productprice * orderquantity), 0) DESC;
 ```
 
-📸 Images:  
-- `Projects/First Project/SQL/Images/Sales_Revenue_by_All_Regions.png`  
-- `Projects/First Project/SQL/Images/Sales_Revenue_by_US_Region.png`  
-
+![Sales Revenue by All Regions](../Images/Sales_Revenue_by_All_Regions.png)  
+![Sales Revenue by US Region](../Images/Sales_Revenue_by_US_Region.png)  
 💡 **Insight:** Southwest and Northwest regions dominate revenue, even outperforming most countries. The other 3 US regions have minimal sales.  
 ✅ **Recommendation:** Investigate store presence and marketing spend in low-performing US regions.
 
@@ -72,7 +70,7 @@ GROUP BY productcategorykey, CategoryName
 ORDER BY SUM(orderquantity * productprice) DESC;
 ```
 
-📸 Image: `Projects/First Project/SQL/Images/Revenue_by_Category.png`  
+![Revenue by Category](../Images/Revenue_by_Category.png)  
 💡 **Insight:** Bikes dominate, making up 95% of total sales.
 
 ```sql
@@ -105,7 +103,7 @@ GROUP BY ProductName, subcategoryname, categoryname, ProductPrice
 ORDER BY SUM(orderquantity * ProductPrice) DESC;
 ```
 
-📸 Image: `Projects/First Project/SQL/Images/Top_10_Products.png`  
+![Top 10 Products](../Images/Top_10_Products.png)  
 💡 **Insight:** All top 10 products are either mountain bikes or road bikes — bikes dominate both quantity and revenue.
 
 ---
@@ -126,7 +124,7 @@ GROUP BY ProductName, subcategoryname, categoryname, ProductPrice
 ORDER BY SUM(orderquantity * ProductPrice) DESC;
 ```
 
-📸 Image: `Projects/First Project/SQL/Images/Top_10_non-bike_Products.png`  
+![Top 10 Non-Bike Products](../Images/Top_10_non-bike_Products.png)  
 💡 **Insight:** Revenue from non-bike products is much lower. Top performers include fenders, helmets, and tires.
 
 ---
@@ -144,7 +142,7 @@ GROUP BY categoryname
 ORDER BY SUM(orderquantity * grossmargin) DESC;
 ```
 
-📸 Image: `Projects/First Project/SQL/Images/Margin_by_Category.png`  
+![Margin by Category](../Images/Margin_by_Category.png)  
 💡 **Insight:** Bikes generate the most profit, but Accessories have a significantly better margin. Clothing offers the lowest return.  
 ✅ **Recommendation:** Investigate how to raise bike margins; consider reducing focus on clothing.
 
@@ -165,7 +163,7 @@ GROUP BY subcategoryname, categoryname
 ORDER BY SUM(orderquantity * grossmargin) DESC;
 ```
 
-📸 Image: `Projects/First Project/SQL/Images/Returns_by_Subcategory.png`  
+![Returns by Subcategory](../Images/Returns_by_Subcategory.png)  
 💡 **Insight:** Mountain bikes are second in profit and have a much better margin than Road/Touring bikes. Accessories subcategories also perform well in terms of margin.  
 ✅ **Recommendation:** Focus more on growing Mountain Bike sales. Evaluate how to improve Road/Touring bike margins.
 
@@ -201,8 +199,6 @@ PIVOT (
 ORDER BY YearMonth;
 ```
 
-📸 Image: `Projects/First Project/SQL/Images/Revenue_by_month_by_category.png`  
+![Monthly Revenue by Territory](../Images/Revenue_by_month_by_category.png)  
 💡 **Insight:** Revenue trends upward over time for all regions, despite temporary dips for Southwest US and Australia, both of which rebounded strongly.  
 ✅ **Recommendation:** Compare trends to marketing spend and store expansion data for better understanding of growth drivers.
-
----
