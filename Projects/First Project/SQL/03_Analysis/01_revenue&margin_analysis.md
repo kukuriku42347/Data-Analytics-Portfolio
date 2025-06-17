@@ -53,7 +53,7 @@ ORDER BY ROUND(SUM(productprice * orderquantity), 0) DESC;
 
 ![Sales Revenue by All Regions](../Images/Sales_Revenue_by_All_Regions.png)  
 ![Sales Revenue by US Region](../Images/Sales_Revenue_by_US_Region.png)  
-💡 **Insight:** Southwest and Northwest regions dominate revenue, even outperforming most countries. The other 3 US regions have minimal sales.  
+💡 **Insight:** Southwest and Northwest regions dominate revenue, even outperforming all other countries. The other 3 US regions have minimal sales.  
 ✅ **Recommendation:** Investigate store presence and marketing spend in low-performing US regions.
 
 ---
