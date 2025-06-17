@@ -6,7 +6,7 @@ Analyze which categories and subcategories have the most returns, how returns ha
 ---
 
 ## 🔄 Returns by Category & Subcategory  
-📍 `../../Images/Returns_by_Subcategory.png`
+![Returns by Subcategory](../Images/Returns_by_Subcategory.png)
 
 **SQL:**  
 SELECT  
@@ -40,8 +40,8 @@ Return value (based on product cost) has increased over time. This may be fine i
 ---
 
 ## 📊 Returns vs Revenue Over Time  
-📍 `../../Images/Total_Return_Value_vs_Total_Revenue_over_time.png`  
-📍 `../../Images/Total_Return_Value_over_Revenue_Value.png`
+![Total Return Value vs Total Revenue over time](../Images/Total_Return_Value_vs_Total_Revenue_over_time.png)  
+![Total Return Value over Revenue Value](../Images/Total_Return_Value_over_Revenue_Value.png)
 
 **Insight:**  
 Return product value as a % of total revenue fluctuated early on (likely due to fewer sales) but stabilized by late 2020. Since then, it's varied only slightly, suggesting a steady return rate is being established.
@@ -49,7 +49,7 @@ Return product value as a % of total revenue fluctuated early on (likely due to 
 ---
 
 ## 📈 Subcategory Profitability, Margins & Returns  
-📍 `../../Images/Total_profit_Return_Margin_returnproductprice_over_total_profit.png`
+![Total profit, Return, Margin, return product price over total profit](../Images/Total_profit_Return_Margin_returnproductprice_over_total_profit.png)
 
 **SQL:**  
 WITH agg_table1 AS (  
@@ -87,7 +87,7 @@ ORDER BY total_profit DESC;
 ## 🌎 Subcategory Analysis by Country
 
 ### 🇺🇸 United States  
-📍 `../../Images/USA_Total_profit_Return_Margin_returnproductprice_over_total_profit.png`
+![USA Total profit, Return, Margin, return product price over total profit](../Images/USA_Total_profit_Return_Margin_returnproductprice_over_total_profit.png)
 
 **SQL:**  
 WITH agg_table1 AS (  
@@ -125,7 +125,7 @@ ORDER BY total_profit DESC;
 ---
 
 ### 🇦🇺 Australia  
-📍 `../../Images/Australia_Total_profit_Return_Margin_returnproductprice_over_total_profit.png`
+![Australia Total profit, Return, Margin, return product price over total profit](../Images/Australia_Total_profit_Return_Margin_returnproductprice_over_total_profit.png)
 
 **Insight:**  
 - **Touring Bikes** are the third most profitable subcategory, but have a high return rate and poor margin.  
