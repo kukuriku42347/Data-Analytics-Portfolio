@@ -6,19 +6,17 @@ Analyze which categories and subcategories have the most returns, how returns ha
 ---
 
 ## 🔄 Returns by Category & Subcategory  
-📍 `../../Images/Returns_by_Subcategory.png``
+📍 `../../Images/Returns_by_Subcategory.png`
 
-**SQL:**
-```sql
-SELECT 
-  CategoryName, 
-  SubcategoryName, 
-  SUM(CAST(ReturnQuantity AS INT)) AS num_returns 
-FROM Returns r
-LEFT JOIN sales_analysis sa ON sa.Product_ProductKey = r.ProductKey
-GROUP BY CategoryName, SubcategoryName
+**SQL:**  
+SELECT  
+  CategoryName,   
+  SubcategoryName,   
+  SUM(CAST(ReturnQuantity AS INT)) AS num_returns   
+FROM Returns r  
+LEFT JOIN sales_analysis sa ON sa.Product_ProductKey = r.ProductKey  
+GROUP BY CategoryName, SubcategoryName  
 ORDER BY num_returns DESC;
-```
 
 **Insight:**  
 Four accessories subcategories have the most returns: **Tires and Tubes**, **Bottles and Cages**, **Helmets**, and **Fenders**.  
@@ -28,15 +26,13 @@ High-value subcategories like **bikes** are returned less often.
 
 ## 📅 Returns Over Time  
 
-**SQL:**
-```sql
-SELECT 
-  ROUND(SUM(ProductPrice * ReturnQuantity), 0) AS total_product_cost,
-  YearMonth
-FROM Returns
-GROUP BY YearMonth
+**SQL:**  
+SELECT  
+  ROUND(SUM(ProductPrice * ReturnQuantity), 0) AS total_product_cost,  
+  YearMonth  
+FROM Returns  
+GROUP BY YearMonth  
 ORDER BY YearMonth;
-```
 
 **Insight:**  
 Return value (based on product cost) has increased over time. This may be fine if sales have grown proportionally.
@@ -55,32 +51,30 @@ Return product value as a % of total revenue fluctuated early on (likely due to 
 ## 📈 Subcategory Profitability, Margins & Returns  
 📍 `../../Images/Total_profit_Return_Margin_returnproductprice_over_total_profit.png`
 
-**SQL:**
-```sql
-WITH agg_table1 AS (
-  SELECT 
-    ROUND(SUM((ProductPrice - ProductCost) * OrderQuantity), 0) AS total_profit, 
-    ROUND(AVG((ProductPrice - ProductCost) / ProductPrice) * 100, 1) AS avg_margin, 
-    SubcategoryName,
-    SUM(OrderQuantity) AS total_products
-  FROM sales_analysis
-  GROUP BY SubcategoryName
-),
-agg_table2 AS (
-  SELECT 
-    SUM(CAST(ReturnQuantity AS INT)) AS total_returned_products,
-    ProductSubcategory,
-    ROUND(SUM(ProductPrice), 0) AS total_returned_price
-  FROM Returns
-  GROUP BY ProductSubcategory
-)
-SELECT *,
-  ROUND((total_returned_price / total_profit) * 100, 2) AS returned_over_profit,
-  ROUND((total_returned_products * 1.0 / total_products) * 100, 2) AS percent_products_returned
-FROM agg_table1 agg1
-LEFT JOIN agg_table2 agg2 ON agg1.SubcategoryName = agg2.ProductSubcategory
+**SQL:**  
+WITH agg_table1 AS (  
+  SELECT   
+    ROUND(SUM((ProductPrice - ProductCost) * OrderQuantity), 0) AS total_profit,   
+    ROUND(AVG((ProductPrice - ProductCost) / ProductPrice) * 100, 1) AS avg_margin,   
+    SubcategoryName,  
+    SUM(OrderQuantity) AS total_products  
+  FROM sales_analysis  
+  GROUP BY SubcategoryName  
+),  
+agg_table2 AS (  
+  SELECT   
+    SUM(CAST(ReturnQuantity AS INT)) AS total_returned_products,  
+    ProductSubcategory,  
+    ROUND(SUM(ProductPrice), 0) AS total_returned_price  
+  FROM Returns  
+  GROUP BY ProductSubcategory  
+)  
+SELECT *,  
+  ROUND((total_returned_price / total_profit) * 100, 2) AS returned_over_profit,  
+  ROUND((total_returned_products * 1.0 / total_products) * 100, 2) AS percent_products_returned  
+FROM agg_table1 agg1  
+LEFT JOIN agg_table2 agg2 ON agg1.SubcategoryName = agg2.ProductSubcategory  
 ORDER BY total_profit DESC;
-```
 
 **Insight & Recommendation:**  
 - **Road bikes** generate the most profit but have lower margins and higher return costs than **mountain bikes**, making the latter more attractive overall.  
@@ -95,34 +89,32 @@ ORDER BY total_profit DESC;
 ### 🇺🇸 United States  
 📍 `../../Images/USA_Total_profit_Return_Margin_returnproductprice_over_total_profit.png`
 
-**SQL:**
-```sql
-WITH agg_table1 AS (
-  SELECT 
-    ROUND(SUM((ProductPrice - ProductCost) * OrderQuantity), 0) AS total_profit, 
-    ROUND(AVG((ProductPrice - ProductCost) / ProductPrice) * 100, 1) AS avg_margin, 
-    SubcategoryName,
-    SUM(OrderQuantity) AS total_products
-  FROM sales_analysis
-  WHERE Country = 'United States'
-  GROUP BY SubcategoryName
-),
-agg_table2 AS (
-  SELECT 
-    SUM(CAST(ReturnQuantity AS INT)) AS total_returned_products,
-    ProductSubcategory,
-    ROUND(SUM(ProductPrice), 0) AS total_returned_price
-  FROM Returns
-  WHERE TerritoryKey IN ('1', '2', '3', '4', '5')
-  GROUP BY ProductSubcategory
-)
-SELECT *,
-  ROUND((total_returned_price / total_profit) * 100, 2) AS returned_over_profit,
-  ROUND((total_returned_products * 1.0 / total_products) * 100, 2) AS percent_products_returned
-FROM agg_table1 agg1
-LEFT JOIN agg_table2 agg2 ON agg1.SubcategoryName = agg2.ProductSubcategory
+**SQL:**  
+WITH agg_table1 AS (  
+  SELECT   
+    ROUND(SUM((ProductPrice - ProductCost) * OrderQuantity), 0) AS total_profit,   
+    ROUND(AVG((ProductPrice - ProductCost) / ProductPrice) * 100, 1) AS avg_margin,   
+    SubcategoryName,  
+    SUM(OrderQuantity) AS total_products  
+  FROM sales_analysis  
+  WHERE Country = 'United States'  
+  GROUP BY SubcategoryName  
+),  
+agg_table2 AS (  
+  SELECT   
+    SUM(CAST(ReturnQuantity AS INT)) AS total_returned_products,  
+    ProductSubcategory,  
+    ROUND(SUM(ProductPrice), 0) AS total_returned_price  
+  FROM Returns  
+  WHERE TerritoryKey IN ('1', '2', '3', '4', '5')  
+  GROUP BY ProductSubcategory  
+)  
+SELECT *,  
+  ROUND((total_returned_price / total_profit) * 100, 2) AS returned_over_profit,  
+  ROUND((total_returned_products * 1.0 / total_products) * 100, 2) AS percent_products_returned  
+FROM agg_table1 agg1  
+LEFT JOIN agg_table2 agg2 ON agg1.SubcategoryName = agg2.ProductSubcategory  
 ORDER BY total_profit DESC;
-```
 
 **Insights:**  
 - Top profit subcategories: **Mountain Bikes** and **Road Bikes**, but mountain bikes have a better margin and lower return rate.  
@@ -139,4 +131,3 @@ ORDER BY total_profit DESC;
 - **Touring Bikes** are the third most profitable subcategory, but have a high return rate and poor margin.  
 - Good subcategories: **Tires and Tubes**, **Bottles and Cages**  
 - Poor performer: **Jerseys** (very poor margin and return rate)
-
