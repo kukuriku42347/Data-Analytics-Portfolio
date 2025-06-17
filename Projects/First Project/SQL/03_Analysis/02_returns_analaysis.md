@@ -6,7 +6,7 @@ Analyze which categories and subcategories have the most returns, how returns ha
 ---
 
 ## 🔄 Returns by Category & Subcategory  
-📍 `Projects/First_Project/SQL/Images/Returns_by_Subcategory.png`
+📍 `../../Images/Returns_by_Subcategory.png``
 
 **SQL:**
 ```sql
@@ -44,8 +44,8 @@ Return value (based on product cost) has increased over time. This may be fine i
 ---
 
 ## 📊 Returns vs Revenue Over Time  
-📍 `Projects/First_Project/SQL/Images/Total_Return_Value_vs_Total_Revenue_over_time.png`  
-📍 `Projects/First_Project/SQL/Images/Total_Return_Value_over_Revenue_Value.png`
+📍 `../../Images/Total_Return_Value_vs_Total_Revenue_over_time.png`  
+📍 `../../Images/Total_Return_Value_over_Revenue_Value.png`
 
 **Insight:**  
 Return product value as a % of total revenue fluctuated early on (likely due to fewer sales) but stabilized by late 2020. Since then, it's varied only slightly, suggesting a steady return rate is being established.
@@ -53,7 +53,7 @@ Return product value as a % of total revenue fluctuated early on (likely due to 
 ---
 
 ## 📈 Subcategory Profitability, Margins & Returns  
-📍 `Projects/First_Project/SQL/Images/Total_profit_Return_Margin_returnproductprice_over_total_profit.png`
+📍 `../../Images/Total_profit_Return_Margin_returnproductprice_over_total_profit.png`
 
 **SQL:**
 ```sql
@@ -93,7 +93,7 @@ ORDER BY total_profit DESC;
 ## 🌎 Subcategory Analysis by Country
 
 ### 🇺🇸 United States  
-📍 `Projects/First_Project/SQL/Images/USA_Total_profit_Return_Margin_returnproductprice_over_total_profit.png`
+📍 `../../Images/USA_Total_profit_Return_Margin_returnproductprice_over_total_profit.png`
 
 **SQL:**
 ```sql
@@ -133,7 +133,7 @@ ORDER BY total_profit DESC;
 ---
 
 ### 🇦🇺 Australia  
-📍 `Projects/First_Project/SQL/Images/Australia_Total_profit_Return_Margin_returnproductprice_over_total_profit.png`
+📍 `../../Images/Australia_Total_profit_Return_Margin_returnproductprice_over_total_profit.png`
 
 **Insight:**  
 - **Touring Bikes** are the third most profitable subcategory, but have a high return rate and poor margin.  
