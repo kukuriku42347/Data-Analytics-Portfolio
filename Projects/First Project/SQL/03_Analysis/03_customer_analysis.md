@@ -33,7 +33,7 @@ FROM agg_cust
 GROUP BY gender;
 ```
 
-Projects/First Project/SQL/Images/Customers_Male_Female_Spend.png  
+![Total Spend by Gender](Projects/First Project/SQL/Images/Customers_Male_Female_Spend.png)  
 💡 **Insight:** Male/female spend is fairly equal, with women spending slightly more on average.  
 ✅ **Recommendation:** Consider segmenting marketing equally between genders, with slight emphasis on female preferences.
 
@@ -41,7 +41,7 @@ Projects/First Project/SQL/Images/Customers_Male_Female_Spend.png
 
 ## 👪 Customers by Gender Count  
 
-Projects/First Project/SQL/Images/Customers_Male_Female_Spend.png  
+![Customer Count by Gender](Projects/First Project/SQL/Images/Customers_Male_Female_Spend.png)  
 💡 **Insight:** Slightly fewer female customers—but they spend more on average than men.  
 ✅ **Recommendation:** Consider campaigns to increase female customer acquisition.
 
@@ -58,7 +58,7 @@ GROUP BY annualincome
 ORDER BY total_spends DESC;
 ```
 
-Projects/First Project/SQL/Images/Customers_Annual_Salary_Buckets.png  
+![Revenue by Salary Buckets](Projects/First Project/SQL/Images/Customers_Annual_Salary_Buckets.png)  
 💡 **Insight:** Most revenue comes from lower salary brackets—possibly due to higher customer count in those brackets.  
 ✅ **Recommendation:** Investigate customer count by income level to confirm. Consider pricing strategies tailored to this group.
 
@@ -75,7 +75,7 @@ GROUP BY totalchildren
 ORDER BY total_spends DESC;
 ```
 
-Projects/First Project/SQL/Images/Customers_Spend_by_number_of_children.png  
+![Spend by Number of Children](Projects/First Project/SQL/Images/Customers_Spend_by_number_of_children.png)  
 💡 **Insight:** Strong negative correlation between number of children and spend (–0.975).  
 ✅ **Recommendation:** Prioritize targeting customers with fewer or no children.
 
@@ -92,7 +92,7 @@ GROUP BY occupation
 ORDER BY total_spends DESC;
 ```
 
-Projects/First Project/SQL/Images/Total_Spend_by_Occupation.png  
+![Total Spend by Occupation](Projects/First Project/SQL/Images/Total_Spend_by_Occupation.png)  
 💡 **Insight:** Professionals, skilled manual workers, and managers spend the most.  
 ✅ **Recommendation:** Focus marketing efforts on these occupation groups.
 
@@ -100,7 +100,7 @@ Projects/First Project/SQL/Images/Total_Spend_by_Occupation.png
 
 ## 👩‍💼 Revenue by Occupation and Gender  
 
-Projects/First Project/SQL/Images/Total_Spend_by_Occupation&Gender.png  
+![Spend by Occupation and Gender](Projects/First Project/SQL/Images/Total_Spend_by_Occupation&Gender.png)  
 💡 **Insight:** The same high-spending occupation trend holds for both genders.  
 ✅ **Recommendation:** Segment by occupation first, then refine by gender if needed.
 
@@ -135,6 +135,6 @@ GROUP BY (age / 5) * 5
 ORDER BY total_spends DESC;
 ```
 
-Projects/First Project/SQL/Images/Spend_by_Age_Buckets.png  
+![Spend by Age Buckets](Projects/First Project/SQL/Images/Spend_by_Age_Buckets.png)  
 💡 **Insight:** Age range 45–69 are the top spenders. Some unrealistic ages (e.g. 110+) suggest data isn't fully clean.  
 ✅ **Recommendation:** Focus campaigns on 45–69 group. Clean and validate outlier age data.
