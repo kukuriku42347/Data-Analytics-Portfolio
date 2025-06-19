@@ -1,3 +1,4 @@
+```sql
 -- Action: Combined 3 sales data tables into one Sales table:
 select * into Sales from(
   select * from Sales_2020
