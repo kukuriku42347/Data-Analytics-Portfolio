@@ -1,130 +1,95 @@
-# 🧠 Customer and Product Analysis – AdventureWorks SQL Project
+# 🧠 AdventureWorks Customer & Product Analysis Project
 
-**Author**: [Your Name]  
-**Tools**: PostgreSQL, Excel  
-**Project Type**: Data Analyst Portfolio Project  
-**Date**: May 2025
+**Author:** Eugene F
+**Tools:** SQL Server, Excel  
+**Project Type:** Data Analyst Portfolio Project  
+**Date:** June 2025  
 
 ---
 
 ## 📌 Project Overview
 
-AdventureWorks Cycles is a fictional outdoor gear and bike retailer. This project analyzes their customer orders, product sales, and return data to answer key business questions and generate actionable insights.
+This project explores customer order, product sales, and return data from the AdventureWorks database to identify trends, profitability drivers, and areas for improvement. Using SQL and Excel, the analysis provides actionable insights into product performance, customer demographics, and regional profitability.
 
-**Objectives:**
-
-- Identify the most profitable products and subcategories
-- Understand return behavior and its impact on margins
-- Compare performance by geography and customer income group
-- Suggest strategies to improve profit and reduce waste
-
----
-
-## 🧰 Dataset & Tools
-
-- **Source**: AdventureWorks PostgreSQL database (custom queries)
-- **Data Size**: ~2,200 orders across 1 year
-- **Tools**:
-  - PostgreSQL for querying and joining multiple tables
-  - Excel for charting, pivot tables, and visual analysis
+**Key questions answered:**  
+- Which product categories generate the most profit?  
+- How do returns impact overall profitability?  
+- What are the customer demographics driving sales?  
+- Which geographic regions perform best in profit and returns?
 
 ---
 
-## 📊 Key Metrics Calculated
+## 🧰 Datasets & Tools
 
-| Metric                        | Description                                                        |
-|------------------------------|--------------------------------------------------------------------|
-| **Total Profit**             | Sales - Standard Cost                                              |
-| **Gross Margin**             | Profit / Sales                                                     |
-| **Return Rate**              | % of items returned per product                                    |
-| **Return Cost**              | Standard Cost * Quantity Returned                                  |
-| **Profit per Return Cost**   | Profit ÷ Return Cost (adjusts for return burden)                   |
-| **Revenue by Income Level**  | Total sales segmented by customer income bracket                   |
-| **Geographic Profitability** | Profit by country and region (e.g., US-Southwest, Australia)       |
+- **Data source:** AdventureWorks Data  
+- **Tools:**  
+  - SQL Server: Data extraction, joins, and KPI calculations  
+  - Excel: Pivot tables, charts, and data visualization  
 
 ---
 
-## 📈 Insights & Charts
+## 📊 Main Metrics & Calculations
 
-### 1. 🚲 Mountain Bikes Are the Profit Drivers
-
-- Mountain Bikes generate the highest profit across all subcategories.
-- They also have lower return rates than categories like Jerseys or Shorts.
-
-🟢 **Recommendation**: Focus more marketing and stock on Mountain Bikes.
-
-<!-- Insert chart: bar chart of profit by product subcategory -->
-
----
-
-### 2. 🌍 US & Australia Are Top-Performing Regions
-
-- US Southwest leads in total profit.
-- Australia has strong profit with relatively low return costs.
-
-🟢 **Recommendation**: Expand operations in Australia; it's an underutilized but profitable market.
-
-<!-- Insert chart: profit by country/region -->
+| Metric                    | Description                                       |
+|---------------------------|-------------------------------------------------|
+| **Total Sales**           | Sum of product sales                             |
+| **Total Profit**          | Sales revenue minus standard cost                |
+| **Gross Margin**          | Profit divided by sales                           |
+| **Return Rate**           | Percentage of sold items returned                 |
+| **Return Cost**           | Cost attributed to returned products              |
+| **Profit after Returns**  | Profit minus return costs                          |
+| **Customer Income Level** | Categorized income brackets of customers          |
+| **Customer Occupation**   | Occupation categories for customer segmentation   |
+| **Family Size**           | Number of children in customer households         |
+| **Profit by Region**      | Geographic breakdown of profits and returns       |
 
 ---
 
-### 3. 👛 Low-Income Customers Are the Biggest Spenders
+## 📈 Key Findings
 
-- Most revenue comes from customers in the lowest income bracket.
-- This may indicate a loyal budget-conscious market or affordable pricing strategies.
+### 1. **Product Profitability & Returns**  
+- Mountain Bikes and Road Bikes show the highest profits and healthy gross margins.  
+- Apparel categories (like Jerseys and Shorts) have high return rates and reduce overall profitability.
 
-🟢 **Recommendation**: Don’t neglect low-income segments; tailor value bundles or loyalty rewards.
+### 2. **Customer Demographics**  
+- Customers with lower income levels generate a substantial portion of sales volume.  
+- Occupations such as Professionals and Managers contribute significantly to revenue.  
+- Larger family sizes correlate with lower average spending per customer.
 
-<!-- Insert chart: revenue by income level -->
-
----
-
-### 4. ❌ Jerseys Perform Poorly
-
-- Jerseys have a high return cost relative to profit.
-- Negative profit per return cost indicates they may be a loss leader.
-
-🟢 **Recommendation**: Redesign, reprice, or remove jerseys from the catalogue.
+### 3. **Regional Performance**  
+- US Southwest and Australia show the strongest profitability with moderate return costs.  
+- Some regions have high returns negatively impacting net profit.
 
 ---
 
-## 📎 Top Recommendations
+## 📝 Recommendations
 
-✅ Focus on **Mountain Bikes** — high margin, low returns  
-✅ Scale presence in **Australia** — strong profits per order  
-✅ Target **Low-Income Customers** with loyalty programs or bundles  
-✅ Consider **discontinuing Jerseys** or reducing return rates via better sizing or product photos
+- Focus marketing and stock management on **Mountain and Road Bikes** to maximize profits.  
+- Investigate and reduce return rates in **Clothing** through improved sizing and product information.  
+- Develop targeted promotions for **lower-income customers** and specific occupations with high spend potential.  
+- Expand presence in profitable regions such as **Australia** and **US Southwest**.  
 
----
-
-## 🚀 Next Steps
-
-- Create a dashboard (Power BI or Tableau) to explore trends interactively
-- Add temporal analysis (e.g. monthly seasonality of returns or revenue)
-- Combine RFM segmentation with product performance for deeper customer insights
 
 ---
 
-## 🧠 What I Learned
+## 🧠 Skills Developed
 
-This project sharpened my ability to:
-
-- Join complex tables using SQL (e.g. sales, returns, products, customers, geographies)
-- Derive business-critical KPIs like gross margin and return-adjusted profitability
-- Translate messy Excel outputs into actionable insights
-- Tell a compelling story with data, not just report figures
+- Writing advanced SQL queries involving multiple table joins and aggregations.  
+- Calculating and interpreting retail KPIs such as gross margin and return-adjusted profit.  
+- Using Excel pivot tables and charts to visualize and summarize complex datasets.  
+- Translating raw data into actionable business insights and recommendations.  
 
 ---
 
-## 📂 Files
+## 📂 Included Files
 
-- `sql_queries.sql`: All key queries used for extracting and joining data
-- `analysis_summary.xlsx`: Excel charts, pivot tables, and raw tables
-- `README.md`: This report
+- `sql_queries.sql` — SQL queries used for data extraction and aggregation  
+- `analysis_summary.xlsx` — Excel pivot tables and charts summarizing key metrics  
+- `README.md` — This project summary and documentation  
 
 ---
 
 ## 📬 Contact
 
-[Your LinkedIn](https://www.linkedin.com/in/yourname)  
-[Your Email Address]  
+https://www.linkedin.com/in/eugene-fogel-english-teacher-coach
+fogel.evgeny@gmail.com
