@@ -3,13 +3,12 @@
 **Author:** Eugene F
 **Tools:** SQL Server, Excel  
 **Project Type:** Data Analyst Portfolio Project  
-**Date:** June 2025  
 
 ---
 
 ## 📌 Project Overview
 
-This project explores customer order, product sales, and return data from the AdventureWorks database to identify trends, profitability drivers, and areas for improvement. Using SQL and Excel, the analysis provides actionable insights into product performance, customer demographics, and regional profitability.
+This project explores customer order, product sales, and return data from the AdventureWorks database to identify sales trends, profitability drivers, and areas for improvement. Using SQL and Excel, the analysis provides actionable insights into product performance, customer demographics, and regional profitability.
 
 **Key questions answered:**  
 - Which product categories generate the most profit?  
