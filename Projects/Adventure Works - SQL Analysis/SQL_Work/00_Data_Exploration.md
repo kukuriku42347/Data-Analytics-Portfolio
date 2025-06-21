@@ -72,5 +72,6 @@ Checked for unique values in potential primary key columns across tables to vali
 
 ### 🧭 From Power BI  
 *Relationship diagram created in Power BI using primary and foreign keys.*  
-📍 *(Image to be inserted here)*
+📍 ![Data Tables Relationships](Images/Data_Tables_Relationships.png)
+
 
