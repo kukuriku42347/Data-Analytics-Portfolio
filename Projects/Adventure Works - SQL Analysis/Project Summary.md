@@ -8,7 +8,7 @@
 
 ## 📌 Project Overview
 
-This project explores customer order, product sales, and return data from the AdventureWorks database to identify sales trends, profitability drivers, and areas for improvement. Using SQL and Excel, the analysis provides actionable insights into product performance, customer demographics, and regional profitability.
+This project explores customer order, product sales, and return data from the AdventureWorks database to identify sales trends, profitability drivers, and areas for improvement. Using mostly SQL, the analysis provides actionable insights into product performance, customer demographics, and regional profitability.
 
 **Key questions answered:**  
 - Which product categories generate the most profit?  
@@ -23,7 +23,7 @@ This project explores customer order, product sales, and return data from the Ad
 - **Data source:** AdventureWorks Data  
 - **Tools:**  
   - SQL Server: Data extraction, joins, and KPI calculations  
-  - Excel: Pivot tables, charts, and data visualization  
+  - Excel: data visualization and quick plots
 
 ---
 
@@ -48,7 +48,7 @@ This project explores customer order, product sales, and return data from the Ad
 
 ### 1. **Product Profitability & Returns**  
 - Mountain Bikes and Road Bikes show the highest profits and healthy gross margins.  
-- Apparel categories (like Jerseys and Shorts) have high return rates and reduce overall profitability.
+- Clothing categories (like Jerseys and Shorts) have high return rates and reduce overall profitability.
 
 ### 2. **Customer Demographics**  
 - Customers with lower income levels generate a substantial portion of sales volume.  
@@ -63,28 +63,22 @@ This project explores customer order, product sales, and return data from the Ad
 
 ## 📝 Recommendations
 
-- Focus marketing and stock management on **Mountain and Road Bikes** to maximize profits.  
+- Focus marketing on the subcategory of **Mountain Bikes** as they generate the second-best revenue and have a higher margin than the top revenue subcategory of **Road Bikes** & the third best subcategory of **Touring Bikes**.
+- Explore how to raise the margin % on **Road Bikes** as it is the top revenue subcategory. 
 - Investigate and reduce return rates in **Clothing** through improved sizing and product information.  
 - Develop targeted promotions for **lower-income customers** and specific occupations with high spend potential.  
-- Expand presence in profitable regions such as **Australia** and **US Southwest**.  
+- Expand presence in profitable regions such as **Australia** and **US Southwest**.
+- Explore expansion possibilities in the three regions in the US where Adventure Works don't generate much revenue, namely **Southeast**, **Southwest**, and **Central**.
 
 
 ---
 
 ## 🧠 Skills Developed
 
-- Writing advanced SQL queries involving multiple table joins and aggregations.  
+- Writing SQL queries involving multiple table joins and aggregations.  
 - Calculating and interpreting retail KPIs such as gross margin and return-adjusted profit.  
-- Using Excel pivot tables and charts to visualize and summarize complex datasets.  
+- Using Excel visualize and summarize complex datasets.  
 - Translating raw data into actionable business insights and recommendations.  
-
----
-
-## 📂 Included Files
-
-- `sql_queries.sql` — SQL queries used for data extraction and aggregation  
-- `analysis_summary.xlsx` — Excel pivot tables and charts summarizing key metrics  
-- `README.md` — This project summary and documentation  
 
 ---
 
