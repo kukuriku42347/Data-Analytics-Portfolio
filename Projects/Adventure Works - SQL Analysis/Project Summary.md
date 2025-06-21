@@ -2,7 +2,7 @@
 
 **Author:** Eugene F
 **Tools:** SQL Server, Excel  
-**Project Type:** Data Analyst Portfolio Project  
+**Project Type:** Data Analysis
 
 ---
 
