@@ -84,5 +84,5 @@ This project explores customer order, product sales, and return data from the Ad
 
 ## 📬 Contact
 
-https://www.linkedin.com/in/eugene-fogel-english-teacher-coach
+www.linkedin.com/in/eugene-fogel-data-analyst
 fogel.evgeny@gmail.com
