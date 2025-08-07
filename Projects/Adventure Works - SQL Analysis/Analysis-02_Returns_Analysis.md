@@ -78,7 +78,7 @@ LEFT JOIN agg_table2 agg2 ON agg1.SubcategoryName = agg2.ProductSubcategory
 ORDER BY total_profit DESC;
 ```
 
-![Total profit, Return, Margin, return product price over total profit]![Total Profit Return Margin vs Return Product Price Over Total Profit](Images/Images/Total_profit_Return_Margin_returnproductprice_over_total_profit.png)  
+![Total Profit Return Margin vs Return Product Price Over Total Profit](Images/Images/Total_profit_Return_Margin_returnproductprice_over_total_profit.png)    
 💡 **Insight:**  
 - **Road bikes** generate the most profit but have lower margins and higher return costs than **mountain bikes**, making the latter more attractive overall.  
 - **Touring bikes** show similar weaknesses to road bikes, but with an even higher return rate.  
@@ -121,7 +121,7 @@ LEFT JOIN agg_table2 agg2 ON agg1.SubcategoryName = agg2.ProductSubcategory
 ORDER BY total_profit DESC;
 ```
 
-![USA Total profit, Return, Margin, return product price over total profit](../Images/USA_Total_profit_Return_Margin_returnproductprice_over_total_profit.png)  
+![USA – Total Profit Return Margin vs Return Product Price Over Total Profit](Images/Images/USA_Total_profit_Return_Margin_returnproductprice_over_total_profit.png)  
 💡 **Insight:**  
 - Top profit subcategories: **Mountain Bikes** and **Road Bikes**, but mountain bikes have a better margin and lower return rate.  
 - **Touring Bikes** (3rd most profitable) need improved margins.  
@@ -132,7 +132,7 @@ ORDER BY total_profit DESC;
 
 ### 🇦🇺 Australia  
 
-![Australia Total profit, Return, Margin, return product price over total profit](../Images/Australia_Total_profit_Return_Margin_returnproductprice_over_total_profit.png)  
+![Australia – Total Profit Return Margin vs Return Product Price Over Total Profit](Images/Images/Australia_Total_profit_Return_Margin_returnproductprice_over_total_profit.png)  
 💡 **Insight:**  
 - **Touring Bikes** are the third most profitable subcategory, but have a high return rate and poor margin.  
 - Good subcategories: **Tires and Tubes**, **Bottles and Cages**  
