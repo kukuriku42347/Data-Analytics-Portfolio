@@ -18,7 +18,7 @@ GROUP BY country
 ORDER BY ROUND(SUM(productprice * orderquantity), 0) DESC;
 ```
 
-![Sales Revenue by Territory](Images/Images/Sales_Revenue_by_Territory1.png)
+![Sales Revenue by Territory](Images/Images/Sales_Revenue_by_Territory1.png) 
 💡 **Insight:** US brings in the most revenue, followed closely by Australia. Combined revenue from France, Germany, and the UK is comparable to top performers. Canada performs weakest.  
 ✅ **Recommendation:** Explore sales/marketing saturation in underperforming countries to find expansion opportunities.
 
@@ -51,8 +51,8 @@ GROUP BY region
 ORDER BY ROUND(SUM(productprice * orderquantity), 0) DESC;
 ```
 
-![Sales Revenue by All Regions](../Images/Sales_Revenue_by_All_Regions.png)  
-![Sales Revenue by US Region](../Images/Sales_Revenue_by_US_Region.png)  
+![Sales Revenue by All Regions](Images/Images/Sales_Revenue_by_All_Regions.png)  
+![Sales Revenue by US Region](Images/Images/Sales_Revenue_by_US_Region.png)  
 💡 **Insight:** Southwest and Northwest regions dominate revenue, even outperforming all other countries. The other 3 US regions have minimal sales.  
 ✅ **Recommendation:** Investigate store presence and marketing spend in low-performing US regions.
 
@@ -70,7 +70,7 @@ GROUP BY productcategorykey, CategoryName
 ORDER BY SUM(orderquantity * productprice) DESC;
 ```
 
-![Revenue by Category](../Images/Revenue_by_Category.png)  
+![Revenue by Category](Images/Images/Revenue_by_Category.png)  
 💡 **Insight:** Bikes dominate, making up 95% of total sales.
 
 ```sql
@@ -103,7 +103,7 @@ GROUP BY ProductName, subcategoryname, categoryname, ProductPrice
 ORDER BY SUM(orderquantity * ProductPrice) DESC;
 ```
 
-![Top 10 Products](../Images/Top_10_Products.png)  
+![Top 10 Products](Images/Images/Top_10_Products.png) 
 💡 **Insight:** All top 10 products are either mountain bikes or road bikes — bikes dominate both quantity and revenue.
 
 ---
@@ -124,7 +124,7 @@ GROUP BY ProductName, subcategoryname, categoryname, ProductPrice
 ORDER BY SUM(orderquantity * ProductPrice) DESC;
 ```
 
-![Top 10 Non-Bike Products](../Images/Top_10_non-bike_Products.png)  
+![Top 10 Non-Bike Products](Images/Images/Top_10_non-bike_Products.png)
 💡 **Insight:** Revenue from non-bike products is much lower. Top performers include fenders, helmets, and tires.
 
 ---
