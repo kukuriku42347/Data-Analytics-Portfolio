@@ -142,7 +142,7 @@ GROUP BY categoryname
 ORDER BY SUM(orderquantity * grossmargin) DESC;
 ```
 
-![Margin by Category](../Images/Margin_by_Category.png)  
+![Margin by Category](Images/Images/Margin_by_Category.png)   
 💡 **Insight:** Bikes generate the most profit, but Accessories have a significantly better margin. Clothing offers the lowest return.  
 ✅ **Recommendation:** Investigate how to raise bike margins; consider reducing focus on clothing.
 
@@ -163,7 +163,7 @@ GROUP BY subcategoryname, categoryname
 ORDER BY SUM(orderquantity * grossmargin) DESC;
 ```
 
-![Returns by Subcategory](../Images/Returns_by_Subcategory.png)  
+![Returns by Subcategory](Images/Images/Returns_by_Subcategory.png)  
 💡 **Insight:** Mountain bikes are second in profit and have a much better margin than Road/Touring bikes. Accessories subcategories also perform well in terms of margin.  
 ✅ **Recommendation:** Focus more on growing Mountain Bike sales. Evaluate how to improve Road/Touring bike margins.
 
@@ -199,6 +199,6 @@ PIVOT (
 ORDER BY YearMonth;
 ```
 
-![Monthly Revenue by Territory](../Images/Revenue_by_month_by_category.png)  
+![Monthly Revenue by Territory](Images/Images/Revenue_by_month_by_category.png)
 💡 **Insight:** Revenue trends upward over time for all regions, despite temporary dips for Southwest US and Australia, both of which rebounded strongly.  
 ✅ **Recommendation:** Compare trends to marketing spend and store expansion data for better understanding of growth drivers.
