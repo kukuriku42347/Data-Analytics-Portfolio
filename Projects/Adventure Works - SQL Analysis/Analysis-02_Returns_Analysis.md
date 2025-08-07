@@ -18,7 +18,7 @@ GROUP BY CategoryName, SubcategoryName
 ORDER BY num_returns DESC;
 ```
 
-![Returns by Subcategory](../Images/Returns_by_Subcategory.png)  
+![Returns by Subcategory](Images/Images/Returns_by_Subcategory.png) 
 💡 **Insight:** Four accessories subcategories have the most returns: **Tires and Tubes**, **Bottles and Cages**, **Helmets**, and **Fenders**.  
 ✅ **Recommendation:** High-value subcategories like **bikes** are returned less often—focus on improving accessory quality or return policies.
 
@@ -35,7 +35,7 @@ GROUP BY YearMonth
 ORDER BY YearMonth;
 ```
 
-![Returns Over Time](../Images/Returns_Over_Time.png)  
+![Returns Over Time](Images/Images/Returns_Over_Time.png)  
 💡 **Insight:** Return value (based on product cost) has increased over time.  
 ✅ **Recommendation:** Compare return trends with sales growth to assess whether increase is proportional.
 
@@ -43,8 +43,8 @@ ORDER BY YearMonth;
 
 ## 📊 Returns vs Revenue Over Time  
 
-![Total Return Value vs Total Revenue over time](../Images/Total_Return_Value_vs_Total_Revenue_over_time.png)  
-![Total Return Value over Revenue Value](../Images/Total_Return_Value_over_Revenue_Value.png)  
+![Total Return Value vs Total Revenue over time](Images/Images/Total_Return_Value_vs_Total_Revenue_over_time.png)  
+![Total Return Value over Revenue Value](Images/Images/Total_Return_Value_over_Revenue_Value.png)   
 💡 **Insight:** Return product value as a % of total revenue fluctuated early on (likely due to fewer sales) but stabilized by late 2020.  
 ✅ **Recommendation:** Monitor this rate quarterly to ensure profitability isn’t compromised by rising returns.
 
