@@ -78,7 +78,7 @@ LEFT JOIN agg_table2 agg2 ON agg1.SubcategoryName = agg2.ProductSubcategory
 ORDER BY total_profit DESC;
 ```
 
-![Total profit, Return, Margin, return product price over total profit](../Images/Total_profit_Return_Margin_returnproductprice_over_total_profit.png)  
+![Total profit, Return, Margin, return product price over total profit]![Total Profit Return Margin vs Return Product Price Over Total Profit](Images/Images/Total_profit_Return_Margin_returnproductprice_over_total_profit.png)  
 💡 **Insight:**  
 - **Road bikes** generate the most profit but have lower margins and higher return costs than **mountain bikes**, making the latter more attractive overall.  
 - **Touring bikes** show similar weaknesses to road bikes, but with an even higher return rate.  
