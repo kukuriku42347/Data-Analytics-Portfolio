@@ -38,9 +38,10 @@ The dashboard layout includes:
 - Slicer to filter by individual client
 - 8 charts covering revenue trends, client distribution, and productivity
 
-![Dashboard Overview](images/dashboard_full.png)  
-![Revenue by Quarter](images/revenue_by_quarter.png)  
-![Client Spending Histogram](images/client_histogram.png)
+![Dashboard Overview](Images/1st.png)  
+![Revenue by Quarter](Images/2nd.png)  
+![Client Spending Histogram](Images/3rd.png)
+
 
 ---
 
