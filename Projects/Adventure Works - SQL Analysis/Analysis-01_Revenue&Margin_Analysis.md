@@ -18,7 +18,7 @@ GROUP BY country
 ORDER BY ROUND(SUM(productprice * orderquantity), 0) DESC;
 ```
 
-![Sales Revenue by Territory](../Images/Sales_Revenue_by_Territory1.png)  
+![Sales Revenue by Territory](Images/Images/Sales_Revenue_by_Territory1.png)
 💡 **Insight:** US brings in the most revenue, followed closely by Australia. Combined revenue from France, Germany, and the UK is comparable to top performers. Canada performs weakest.  
 ✅ **Recommendation:** Explore sales/marketing saturation in underperforming countries to find expansion opportunities.
 
