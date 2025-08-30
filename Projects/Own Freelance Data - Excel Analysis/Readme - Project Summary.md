@@ -47,7 +47,7 @@ The dashboard layout includes:
 
 ## 🧾 Key Insights
 
-- **Revenue Trend**: Overall revenue decreased over time, falling from ~£4,000 to ~£3,000 per month.
+- **Revenue Trend**: Overall revenue decreased over time, falling from ~£4,000 to ~£3,000 per quarter.
 - **Quarterly Performance**: Q4 consistently underperforms; Q2 shows the most variation.
 - **Revenue Per Hour**: Despite falling total revenue, earnings per hour have increased, especially in the last year.
 - **Client Concentration**: The top 15 clients (of 138) account for 86% of total revenue.
