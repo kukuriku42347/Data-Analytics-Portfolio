@@ -91,8 +91,4 @@ The dashboard layout includes:
 
 ---
 
-## 📫 Contact
-
-Feel free to reach out with questions, collaborations, or feedback:  
-**[Your Name]** – [LinkedIn Profile or Email]
 
