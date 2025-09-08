@@ -99,4 +99,3 @@ A second page drills into weekly patterns and booking behaviors.
 
 ---
 
-## 📌 Repository Contents
