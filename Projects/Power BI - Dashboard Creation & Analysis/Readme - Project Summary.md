@@ -64,8 +64,8 @@ A second page drills into weekly patterns and booking behaviors.
 
 - **Segment breakdown:**  
   - **Cities:** Mumbai (-$25M) and Bangalore (-$18M) hardest hit  
-  - **Room Class:** Elite/RT2 fell ~-$22M  
-  - **Guests:** 2-guest bookings declined -$31M  
+  - **Room Class:** Elite/RT2 in particular fell ~-$22M  
+  - **Guests:** 2-guest bookings in particular declined -$31M  
   - **Platforms:** “Others” category fell ~-$25M  
   - **Hotels:** Atliq Exotica -$26M, Atliq Bay -$14M, Atliq Blu -$12M  
 
@@ -100,4 +100,3 @@ A second page drills into weekly patterns and booking behaviors.
 ---
 
 ## 📌 Repository Contents
-
